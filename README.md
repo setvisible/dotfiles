@@ -1,2 +1,3 @@
-# dotfiles
-my dots
+# Dotfiles
+
+My dots and scripts for my local setup.
