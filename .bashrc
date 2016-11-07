@@ -51,7 +51,7 @@ elif [[ $1 == "-b" ]]; then
     echo "  bhosts              // List the hosts and the queues"
     echo "  bqueues -l"
     echo "  busers"
-    echo "  bwhatzup            // List all jobs in MC and LOC servers"
+    echo "  bwhatzup            // List all running jobs"
     echo "  "
 else
     echo "helpme [-d] [-f] [-n] [-b]"
@@ -70,6 +70,16 @@ fi
 
 #alias bdf="clear ; ls *.nas *.pch *.dat *.bdf *.xdb *.op2 *.f06 -l"
 alias bdf='dir -N1 --color=always *.[nN][aA][sS] *.[pP][cC][hH] *.[dD][aA][tT] *.[bB][dD][fF] *.[xX][dD][bB] *.[oO][pP]2 *.[fF]06 2>/dev/null'
+
+# (!) rename "SERVER_x_NAME" in the command below
+bwhatzup() {
+   echo "========== SERVER 1 =========="
+   bjobs -q SERVER_1_NAME -u all -w
+   echo
+   echo "========== SERVER 2 =========="
+   bjobs -q SERVER_2_NAME -u all -w
+   # ...
+}
 
 cdd() {
     cd "$*"
@@ -96,7 +106,7 @@ alias topme="top -u $USER"
 # ====================================================
 #                      MY TOOLS
 # ====================================================
-alias nasfind=~/nasfind/nasfind
+alias nasfind=~/nastranfind/nastranfind
 alias pch2csv=~/pch2csv/pch2csv
 
 
