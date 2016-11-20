@@ -25,7 +25,7 @@ if [[ $1 == "-d" ]]; then
     echo ".:.:. Directories .:.:."
     echo
     echo
-else if [[ $1 == "-f" ]]; then
+elif [[ $1 == "-f" ]]; then
     echo ".:.:. Custom Functions List .:.:."
     echo "  bdf         See Nastran files in current Dir"
     echo "  cdd         Go to Dir + see content (eq. cd & dir)"
@@ -87,12 +87,9 @@ cdd() {
     ls -alh -p --color=always
 }
 
-#alias dr='clear ; dir -N1a --color=always'
 alias dr="clear ; ls -alh -p --color=always"
 
-
-alias ls='ls --color=auto'
-
+alias ls='ls --group-directories-first --color=auto'
 
 alias pss="ps -e -o pid,ppid,time,user,cmd | grep $USER"
 alias psme="ps -e -o user,pid,ppid,time,cmd | grep $USER"
@@ -115,7 +112,7 @@ alias pch2csv=~/pch2csv/pch2csv
 # ====================================================
 # NASTRAN
 #
-# Grrrr changed in jan 2014:
+# Warning! Nastran v2014 removed 'news' argument?
 # alias nastran="nastran news=no"
 #
 #
