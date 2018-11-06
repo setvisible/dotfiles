@@ -4,9 +4,11 @@
 # ==============================================================================
 /.*
 /*
+!/screenshots
 !/.bash_aliases
 !/.bashrc
 !/.gitignore
+!/powerline.md
 !/notepad++
 !/README.md
 

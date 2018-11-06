@@ -2,6 +2,7 @@
 
 My dots and scripts for my local setup.
 
+Instructions to install `Powerline` [here](./powerline.md)
 
 Some configuration files:
 
