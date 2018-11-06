@@ -95,7 +95,7 @@ alias pss="ps -e -o pid,ppid,time,user,cmd | grep $USER"
 alias psme="ps -e -o user,pid,ppid,time,cmd | grep $USER"
 
 alias h="history"
-alias hg="history | grep --color=always"
+alias hgrep="history | grep --color=always"
 
 alias topme="top -u $USER"
 
